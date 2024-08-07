@@ -1,5 +1,5 @@
 // import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import PaperPage from './pages/PaperPage';
 import './App.css';
@@ -23,10 +23,10 @@ function App() {
         </nav>
 
         <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Home} />
             <Route path="/paper/:id" component={PaperPage} />
-          </Switch>
+          </Routes>
         </main>
       </div>
     </Router>
